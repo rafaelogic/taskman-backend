@@ -33,8 +33,8 @@ class TaskController extends Controller
 
     public function update(StoreTaskRequest $request, Task $task)
     {
-        $task = app(UpdateTask::class)->execute($task, $request->validated());
-        return TaskResource::make($task);
+        $task->update($request->validated());
+        return TaskResource::make($task->refresh());
     }
 
     public function destroy(Task $task)
