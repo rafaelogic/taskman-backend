@@ -31,7 +31,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          access-control-allow-origin: '*'
+          vary: Origin
         description: null
         custom: []
     responseFields: []
@@ -70,7 +70,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          access-control-allow-origin: '*'
+          vary: Origin
         description: null
         custom: []
     responseFields: []
@@ -104,35 +104,35 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: kghxhnfah
+        example: izkygyjz
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: true
-        example: sint
+        example: itaque
         type: string
         custom: []
       due_date:
         name: due_date
         description: 'Must be a valid date.'
         required: false
-        example: '2023-05-06T12:44:42'
+        example: '2023-05-07T00:45:13'
         type: string
         custom: []
       status:
         name: status
         description: 'Must be at least 0. Must not be greater than 3.'
         required: true
-        example: 3
+        example: 1
         type: integer
         custom: []
     cleanBodyParameters:
-      title: kghxhnfah
-      description: sint
-      due_date: '2023-05-06T12:44:42'
-      status: 3
+      title: izkygyjz
+      description: itaque
+      due_date: '2023-05-07T00:45:13'
+      status: 1
     fileParameters: []
     responses: []
     responseFields: []
@@ -179,7 +179,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          access-control-allow-origin: '*'
+          vary: Origin
         description: null
         custom: []
     responseFields: []
@@ -222,35 +222,35 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: wbojcxchk
+        example: tjx
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: true
-        example: id
+        example: dolores
         type: string
         custom: []
       due_date:
         name: due_date
         description: 'Must be a valid date.'
         required: false
-        example: '2023-05-06T12:44:42'
+        example: '2023-05-07T00:45:13'
         type: string
         custom: []
       status:
         name: status
         description: 'Must be at least 0. Must not be greater than 3.'
         required: true
-        example: 3
+        example: 1
         type: integer
         custom: []
     cleanBodyParameters:
-      title: wbojcxchk
-      description: id
-      due_date: '2023-05-06T12:44:42'
-      status: 3
+      title: tjx
+      description: dolores
+      due_date: '2023-05-07T00:45:13'
+      status: 1
     fileParameters: []
     responses: []
     responseFields: []
@@ -285,6 +285,82 @@ endpoints:
         custom: []
     cleanUrlParameters:
       id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/login
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      username:
+        name: username
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: unszrndqodvvvmjwophu
+        type: string
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: ']6W8.c"'
+        type: string
+        custom: []
+    cleanBodyParameters:
+      username: unszrndqodvvvmjwophu
+      password: ']6W8.c"'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/logout
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

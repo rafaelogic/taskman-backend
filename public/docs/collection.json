@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Taskman",
-        "_postman_id": "2e13e641-d80f-44f8-80b4-ac8cc60ac54c",
+        "_postman_id": "58be8340-a0ed-4b4a-9ff0-ab87411a2101",
         "description": "Very basic kanban board that can be used",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -57,8 +57,8 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
+                                    "key": "vary",
+                                    "value": "Origin"
                                 }
                             ],
                             "code": 401,
@@ -105,8 +105,8 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
+                                    "key": "vary",
+                                    "value": "Origin"
                                 }
                             ],
                             "code": 401,
@@ -137,7 +137,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"kghxhnfah\",\"description\":\"sint\",\"due_date\":\"2023-05-06T12:44:42\",\"status\":3}"
+                            "raw": "{\"title\":\"izkygyjz\",\"description\":\"itaque\",\"due_date\":\"2023-05-07T00:45:13\",\"status\":1}"
                         },
                         "description": "",
                         "auth": {
@@ -192,8 +192,8 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
+                                    "key": "vary",
+                                    "value": "Origin"
                                 }
                             ],
                             "code": 401,
@@ -232,7 +232,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"wbojcxchk\",\"description\":\"id\",\"due_date\":\"2023-05-06T12:44:42\",\"status\":3}"
+                            "raw": "{\"title\":\"tjx\",\"description\":\"dolores\",\"due_date\":\"2023-05-07T00:45:13\",\"status\":1}"
                         },
                         "description": "",
                         "auth": {
@@ -259,6 +259,65 @@
                             ]
                         },
                         "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"jdc@test.com\",\"password\":\"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi\\\"\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/logout"
+                        },
+                        "method": "POST",
                         "header": [
                             {
                                 "key": "Content-Type",

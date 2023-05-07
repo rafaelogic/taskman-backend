@@ -69,19 +69,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: kghxhnfah
+                  example: izkygyjz
                 description:
                   type: string
                   description: ''
-                  example: sint
+                  example: itaque
                 due_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-05-06T12:44:42'
+                  example: '2023-05-07T00:45:13'
                 status:
                   type: integer
                   description: 'Must be at least 0. Must not be greater than 3.'
-                  example: 3
+                  example: 1
               required:
                 - title
                 - description
@@ -127,19 +127,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: wbojcxchk
+                  example: tjx
                 description:
                   type: string
                   description: ''
-                  example: id
+                  example: dolores
                 due_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-05-06T12:44:42'
+                  example: '2023-05-07T00:45:13'
                 status:
                   type: integer
                   description: 'Must be at least 0. Must not be greater than 3.'
-                  example: 3
+                  example: 1
               required:
                 - title
                 - description
@@ -163,6 +163,44 @@ paths:
         required: true
         schema:
           type: integer
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: unszrndqodvvvmjwophu
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: ']6W8.c"'
+              required:
+                - username
+                - password
+      security: []
+  /api/logout:
+    post:
+      summary: ''
+      operationId: postApiLogout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
 tags:
   -
     name: Endpoints
