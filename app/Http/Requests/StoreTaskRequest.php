@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests;
 
-use App\Models\Task;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreTaskRequest extends FormRequest
@@ -29,10 +28,24 @@ class StoreTaskRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|unique:tasks|max:255',
+            'title' => 'required|max:255',
             'description' => 'required',
             'due_date'  => 'date',
-            'status' => 'required|integer|min:0|max:3',
+            'status' => 'required',
         ];
+    }
+
+    /**
+     * Demo that we can mutate the data in the form request
+     */
+    public function validationData(): array
+    {
+        $data = $this->all();
+
+        if ($data['status'] && is_string($data['status'])) {
+            $data['status'] = constant('\App\Enums\TaskStatusEnum::' . $data['status']);
+        }
+
+        return $data;
     }
 }
