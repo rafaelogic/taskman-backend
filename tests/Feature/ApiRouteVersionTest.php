@@ -17,7 +17,7 @@ class ApiRouteVersionTest extends TestCase
 
         $this
             ->actingAs($user, 'sanctum')
-            ->getJson('/api/v1/user')
+            ->getJson(route('user.profile'))
             ->assertOk();
     }
 }

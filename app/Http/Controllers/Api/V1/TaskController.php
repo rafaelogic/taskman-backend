@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Actions\Task\CreateNewTask;
 use App\Actions\Task\FetchTask;
-use App\Actions\Task\UpdateTask;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreTaskRequest;
 use App\Http\Resources\V1\TaskResource;
