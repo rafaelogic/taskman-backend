@@ -8,7 +8,7 @@
 </p>
 
 # Taskman
-Taskman is a basic kanban board where you can do CRUD operations and add tasks. This is the backend API where it manages the RESTful endpoints and uses sanctum to securing it. It also handles users authentication and all database data.
+Taskman is a basic kanban board where you can do CRUD operations. This is the backend API where it manages the RESTful endpoints and uses sanctum to securing it. It also handles users authentication and all database data.
 
 ## Setup
 
